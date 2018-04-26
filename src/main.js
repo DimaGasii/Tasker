@@ -12,6 +12,11 @@ import TimeSorting from './TimeSorting.vue'
 import MembersSorting from './MembersSorting.vue'
 import Login from "./Login.vue"
 import Main from "./Main.vue"
+//------------------------------------------------------
+import ToDay from "./ToDay.vue"
+import WorkplaceForToday from './WorkplaceForToday.vue'
+import TimeSortingForToday from './TimeSortingForToday.vue'
+//-------------------------------------------------------
 
 Vue.use( VueRouter )
 Vue.use( VueCookie )
@@ -24,12 +29,19 @@ Vue.component( 'Workplace'		, Workplace )
 Vue.component( 'TimeSorting'	, TimeSorting )
 Vue.component( 'MembersSorting'	, MembersSorting )
 Vue.component( 'Login'			, Login )
+//-------------------------------------------------------
+Vue.component( 'ToDay'			, ToDay )
+Vue.component( 'TimeSortingForToday'	, TimeSortingForToday )
+Vue.component( 'WorkplaceForToday'			, WorkplaceForToday )
+//----------------------------------------------------------
 
 var router = new VueRouter({
 	routes : [
 	{ name : 'login' 		, path: '/login',component : Login },
 	{ name : 'registration' , path: '/registration',component : Registration },
-	{ name : 'main' 		, path: '/main',component : Main }]
+	{ name : 'main' 		, path: '/main',component : Main },
+//---------------------------------------------------------------------------------
+	{ path: '/today',component : ToDay }]
 })
 
 new Vue({

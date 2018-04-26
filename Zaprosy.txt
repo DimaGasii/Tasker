@@ -1,0 +1,123 @@
+/// SPACES /// 
+Получение всех spaces
+Получаю:
+data = { 
+	'spaces' : [
+	{
+      'name' : 'Animals',
+      'img' : './src/icon/Animals.svg',
+      'id' : 0
+    },
+    ... 		
+]}
+
+Получение участников space 
+Передаю:
+	id space'a 
+Получаю: 
+data = { 
+	users : [
+    {
+        'name': "Andrey",
+        'nickname': "Hosstell",
+        'avatar': "./src/img/ava_1.jpg"
+        'id' : 1234
+    },
+    ...
+}
+
+Добавление участника в space 
+Передаю:
+	id space'a, в который добавляю 
+	nickname добавляемого 
+
+Удаление участника из space 
+Передаю:
+	id space'a 
+	id участника 
+
+Создание space
+Передаю:
+	name space 
+	icon space - типо файлом скидывать 
+
+Изменение имени space
+Передаю:
+	id space 
+	new name space
+
+Удаление space 
+Передаю: 
+	id space 
+
+/// AREAS /// 
+Получение всех areas и projects, количество Сегодня, Неделя, Невыполненные  
+Передаю: 
+	id выбранного space 
+Получаю: 
+data = { 
+	'areas': [
+    {
+      "id" : 1234, 
+      "title": "Abak",
+      "projects": [
+        {
+          "name": "Server",
+          "icon": "./src/icon/Server.svg",
+          "id" : 0
+        },
+        {
+          "name": "Web app",
+          "icon": "./src/icon/Webapp.svg",
+          "id": 1
+        },
+        {
+          "name": "Mobile",
+          "icon": "./src/icon/Mobile.svg",
+          "id": 2
+        },
+      ]
+    },
+    ... ], 
+    'general' : [ 1 , 3 , 5 ] // Сегодня, Неделя, Невыполненные  
+}
+
+
+/// TASKS /// 
+Получение всех tasks в project 
+Передаю: 
+	id project 
+Получаю:
+data = { 
+	'tasks': [
+	{
+		'id': 1234,
+	    'name': "The Beggining",
+	    'members': [
+	    {
+	        'name' : "Andrey",
+	        'nickname' : "Hosstell",
+	        'avatar' : "./src/img/ava_1.jpg"
+	    },
+	    {
+	        'name' : "Sergey",
+	        'nickname' : "Pro21",
+	        'avatar' : "./src//img/ava_2.jpg"
+	    },
+	    {
+	        'name' : "Pavel",
+	        'nickname' : "SuperNickname",
+	        'avatar' : "./src/img/ava_3.jpg"
+	    }
+	    ],
+	    'date' : "28 марта",
+	    'description': "Сбор по поводу проекта в кабинете 2-12 в 12:00",
+	    'subtasks' : [
+	        "Обсудить возможный внутрейнний проект",
+	        "Прототип",
+	        "Детальный экран главной",
+	    ],
+	    'tag' : "Meeting"
+	}, ... ]
+}
+
